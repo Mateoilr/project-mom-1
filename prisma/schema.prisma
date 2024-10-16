@@ -16,11 +16,12 @@ datasource db {
 
 model Theory {
   id          Int      @id @default(autoincrement())
-  title       String
-  description String
+  title       String @unique 
+  description String? 
   category    String
   popularity  Int
   confirmed   Boolean
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
+
