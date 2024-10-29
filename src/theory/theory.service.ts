@@ -8,7 +8,9 @@ export class TheoryService {
   constructor(private prisma: PrismaService){}
   
   create(createTheoryDto: CreateTheoryDto) {
-    return 'This action adds a new theory';
+    return this.prisma.theory.create ({
+      data: createTheoryDto
+    })
   }
 
   findAllAlive() {

@@ -28,6 +28,7 @@ async function main() {
             category: "Science",
             popularity: 0,
         }
+        
     });
 console.log({post1, post2});
 }
